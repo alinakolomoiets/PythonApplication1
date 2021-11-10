@@ -27,18 +27,98 @@
 #for i in range(A,B+1):
 #	if i%K==0:print(i)
 #6С клавиатуры вводятся N чисел. Составьте программу, которая определяет количество отрицательных, количество положительных и количество нулей среди введенных чисел.   Значение N вводится с клавиатуры.
+#from random import*
+#p=0
+#n=0
+#N=randint(1,10)
+#for i in range(N):
+#	Arv=int(input("Sisesta arv"))
+#	if Arv>0:
+#		p+=1
+#	elif Arv<0:
+#		n+=1
+#print("Neg:"+str(n))
+#print("Pos:"+str(p))
+#print("Nullid:"+str(N-n-p))
+#3 Вводят 8 чисел. Найти их произведение (только положительных).
+#korrutis=1
+#for i in range(8):
+#	arv=float(input("Arv:"))
+#	if arv>0:
+#		korrutis*=arv
+#	print(korrutis)
+#9 В банк на трехпроцентный вклад положили S евро. Какой станет сумма вклада через N лет?
+#p=1.03
+#S=int(input("Sisesta summa:"))
+#N=int(input("Mitu aastat:"))
+#for aasta in range(1,N+1):
+#	S*=p
+#	print(aasta,"aasata pärast tulemus on ",round(S,2))
+#13.Найти все натуральные числа от 100 до 1000 кратные 7. И посчитать их колличество и сумму.
+#from random import*
+#k=0
+#summa=0
+#for i in range(100,1001):
+#	if i % 7==0:
+#		print(i)#ekraanile
+#		k+=1#kogus suurendame
+#		summa+=i# i-de summa, mis jagatakse 7-ga
+#print("Arvude summa:",summa)
+#print("Kogus:",k)
+#15.Написать программу, выводящую в столбик десять строк, в каждой печатая цифры от 0 до 9, то есть в таком виде:
+#0 1 2 3 4 5 6 7 8 9
+#0 1 2 3 4 5 6 7 8 9
+#...................
+#0 1 2 3 4 5 6 7 8 9
+#from random import*
+#for rjady in range(10):
+#	for stroka in range(10):
+#		print(stroka,end=" ")
+#	print()
+#16.Напишите программу, печатающую столбик строк такого вида:
+#1 0 0 0 0 0 0 0 0
+#0 2 0 0 0 0 0 0 0
+#0 0 3 0 0 0 0 0 0
+#0 0 0 4 0 0 0 0 0
+#0 0 0 0 5 0 0 0 0
+#0 0 0 0 0 6 0 0 0
+#0 0 0 0 0 0 7 0 0
+#0 0 0 0 0 0 0 8 0
+#0 0 0 0 0 0 0 0 9
+#from random import*
+#for rjady in range (1,10):
+#	for stroka in range(1,10):
+#		if rjady==stroka:
+#			print(stroka,end=" ")
+#		else:
+#			print("0",end=" ")
+#	print()
+#29.Напишите программу, печатающую столбик строк такого вида:
+#x 0 0 0 0 0 0 0 0
+#x x 0 0 0 0 0 0 0
+#x 0 x 0 0 0 0 0 0
+#x 0 0 x 0 0 0 0 0
+#x 0 0 0 x 0 0 0 0
+#x 0 0 0 0 x 0 0 0
+#x 0 0 0 0 0 x 0 0
+#x 0 0 0 0 0 0 x 0
+#x 0 0 0 0 0 0 0 x
+#from random import*
+#for rjady in range (1,10):
+#	for stroka in range(1,10):
+#		if rjady==stroka:
+#			print("x",end=" ")
+#		elif stroka==1:
+#			print("x",end="")
+#		else:
+#			print("0",end=" ")
+#	print()
+#from random import*
+#loom=input("Kupi slona!")
+#while loom.title()!="Slon":#upper () ;lower()
+#	loom=input("Vse govorjat"+loom+"!A ty kupi!!!")
+#print("Molodets!!!")
+#28Реализуйте "мини лотерею". Пусть компрьютер "задумает число", а пользователь его должен отгадать. В конце сообщив количество попыток.
 from random import*
-p=0
-n=0
-N=randint(1,10)
-for i in range(N):
-	Arv=int(input("Sisesta arv"))
-	if Arv>0:
-		p+=1
-	elif Arv<0:
-		n+=1
-print("Neg:"+str(n))
-print("Pos:"+str(p))
-print("Nullid:"+strN-n-p))
-
+print("Loterii".center(50,"*"))
 

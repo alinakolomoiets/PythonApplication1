@@ -119,20 +119,85 @@
 #	loom=input("Vse govorjat"+loom+"!A ty kupi!!!")
 #print("Molodets!!!")
 #28Реализуйте "мини лотерею". Пусть компрьютер "задумает число", а пользователь его должен отгадать. В конце сообщив количество попыток.
+#from random import*
+#print("Loterii".center(50,"*"))
+#count=0#число введенное пользователем 
+#counte=0#счетчик попыток
+#x=randint(1,70)
+#int(input("Отгадай число:"))
+#input("Введи свое имя :")
+#while count()!=x:
+#    count=int(input("Отгадай число "+"a"))
+#    counte=counter+1
+#    if count>x:
+#        print("Число должно быть меньше")
+#    elif count<x:
+#        print("Число должно быть больше")
+#    else:
+#        print("Ты угадал число за"+str(counte)+"попыток")
 from random import*
-print("Loterii".center(50,"*"))
-count=0#число введенное пользователем 
-#schetchik==0#счетчик попыток
-x=randint(1,70)
-print=(input("Отгадай ебаное число уебок"))
-print=(input("Введи свое имя уебок:"))
-while count()!=x:
-    count=int(input("Отгадай ебаное число уебок"+"a"))
-    counter=counter+1
-    if count>x:
-        print("Число должно быть меньше")
-    elif count<x:
-        print("Число должно быть больше")
-    else:
-        print("Ты угадал число за"+str(counter)+"попыток")
+from math import*
+from keyboard import*
+print("Teadmiste kontroll".center(60,"*"))
+tase=0
+while tase not in [1,2,3]:
+	try:
+		tase=int(input("Vali tase(1,2,3):"))
 
+	except ValueError :
+		print("Ainult 1,2 või 3!")
+	except:
+		print("Noh!,Ainult 1,2 või 3")
+if tase==1:
+	min=2
+	max=10
+	tehed=["+","-"]
+elif tase==2:
+	min=2
+	max=15
+	tehed=["+","-","*"]
+elif tase==3:
+	min=2
+	max=20
+	tehed=["+","-","*","/"]
+p=0
+kokku=0
+while True:
+	v=input("Kas jätkame? esc-lõpp, space-jätkame")
+	if v=="stop":
+		break
+	else:
+		kokku+=1
+		a=randint(min,max)#!=0 kui//
+		b=randint(min,max)#!=0
+		tehe=choice(tehed)#выбирает действие,работает вместе с random
+		if tehe =="//":
+			while b==0:
+				try:
+					b=randint(min,max)
+				except:
+					ValueError
+		print(f"{a}{tehe}{b}=", end=" ")
+		vaja=int(eval(str(a)+tehe+str(b)))#round()?
+		vastus=""
+		while type (vastus)!=int:
+			try:
+				vastus=int(input("="))#!=str
+			except ValueError:
+				print("Vaja int!!!")
+		if vastus ==vaja:
+			print("Õige vastus!")
+			p+=1
+		else :
+			print("Mõtle veel!")
+print("Kokku ülesandeid oli:",kokku)
+print("Õige vastused :",p)
+K=(p/kokku)*100
+if K<60:
+	print("Hinne 2")
+elif 60<=K<=75:
+	print("Hinne 3")
+elif 75<=K<=90:
+	print("Hinne 4")
+elif K>=90:
+	print("Hinne 5")
